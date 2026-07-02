@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About ME</title>
+    {% if title %}
+        <title>Django About ME - {{ title }}</title>
+    {% else %}
+        <title>Document</title>
+    {% endif %}
 </head>
 <body>
     <h1>Curisioties about me</h1>

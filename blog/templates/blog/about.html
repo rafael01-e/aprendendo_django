@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-        <title>Django About ME - {{ title }}</title>
-    {% else %}
-        <title>Document</title>
-    {% endif %}
-</head>
-<body>
-    <h1>Curisioties about me</h1>
+{% extends "blog/base.html"%}
+{% block content %}
+<h1>Curisioties about me</h1>
+<br>
+<h2>Favorite:</h2>
+<ul>
+    <li>Singer:<a href="https://www.goodvillages.com/profile/alessandro-vilas-boas/" target="_blank">Alessandro Vilas
+            Boas</a></li>
     <br>
-    <h2>Favorite:</h2>
-    <ul>
-        <li>Singer:<a href="https://www.goodvillages.com/profile/alessandro-vilas-boas/" target="_blank">Alessandro Vilas Boas</a></li>
-        <br>
-        <li>Music: <a href="https://www.youtube.com/watch?v=TYmqTUyAzps" target="_blank">Tudo que eu tenho</a></li>
-    </ul>
-</body>
-</html>
+    <li>Music: <a href="https://www.youtube.com/watch?v=TYmqTUyAzps" target="_blank">Tudo que eu tenho</a></li>
+</ul>
+{% endblock %}

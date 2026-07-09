@@ -131,6 +131,11 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
+import os
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media') #Location of our uploaded files...
+MEDIA_URL = '/media/'
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'

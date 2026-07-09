@@ -5,5 +5,6 @@ from users import views as user_views
 urlpatterns = [
     path('', views.home, name='blog-home'),
     path('about/', views.about, name='blog-about'),
-    path('register/', user_views.register, name='register'),
+    path('register/', user_views.register, name='blog-register'),
+    path('profile/', user_views.profile, name='profile'),
 ]

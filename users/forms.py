@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm
+# pyrefly: ignore [missing-import]
+from .models import profile
 
 
 class UserRegisterForm(UserCreationForm):
@@ -10,3 +12,15 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
+
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+    
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = profile
+        fields = ['image']
